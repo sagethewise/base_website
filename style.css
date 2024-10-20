@@ -1,0 +1,199 @@
+/* styles.css */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.a-container {
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  width: 80%;
+}
+header {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333; /* Set your desired background color */
+  color: #fff; /* Set your desired text color */
+  z-index: 100; /* Ensure it appears above other content */
+}
+/* Large */
+.navigation {
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: flex-end;
+
+  list-style: none;
+  margin: 0;
+  background: deepskyblue;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: #1565c0;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+.navigation li:last-of-type a {
+  border-bottom: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Section styles */
+section {
+  padding: 30px;
+  text-align: center;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .navigation {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+  nav ul {
+    text-align: center;
+    display: block;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .navigation {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+/******************************************************* Product *************************************************/
+.p-container {
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  display: flex;
+}
+.p-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2d2c2c;
+  flex-wrap: wrap;
+  padding: 10px 5px;
+  gap: 10px 20px; /* row-gap column gap */
+  background: tomato;
+  width: 80%;
+  height: 80%;
+  margin-top: 10px;
+  color: white;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/******************************************************* Contact **************************************************/
+/* Center-align labels and stack them vertically */
+form label {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 300px; /* Adjust the max-width as needed */
+}
+
+/* Center-align form inputs */
+form input,
+form textarea {
+  display: block;
+  width: 50%;
+  padding: 5px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Center-align submit button */
+form input[type="submit"] {
+  display: block;
+  width: 50%; /* Adjust the width as needed */
+  margin: 20px auto;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+/* Change button color to green on hover */
+form input[type="submit"]:hover {
+  background-color: #4caf50; /* Green color on hover */
+}
+.aside-container {
+  width: 20%;
+  background-color: aliceblue;
+}
+/***********************************Footer styles **************************************************/
+footer {
+  background-color: silver;
+  color: rgb(100, 100, 100);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3%;
+}
+
+/* Footer content styles */
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact info styles */
+.contact-info {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.email-link {
+  color: rgb(35, 34, 34);
+  text-decoration: none;
+}
+
+.email-link:hover {
+  color: blue;
+}
+
+/* Divider styles */
+.divider {
+  color: rgb(43, 43, 43);
+  font-size: 24px;
+}
